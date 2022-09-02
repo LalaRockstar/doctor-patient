@@ -1,0 +1,94 @@
+extends base
+block sidebar 
+    .sidebar
+        .sidebar__brand 
+            h2 
+                span.las.la-accusoft 
+                span DD Centre
+        .sidebar__container 
+            .user 
+                span.user__image 
+                span.user__details 
+                    h2 Ratneswar 
+                    small Super Admin 
+            ul 
+                li 
+                    a(href="#" class="active")
+                        span.las.la-igloo 
+                        span Dashboard 
+                li 
+                    a(href="/appoitments" class="")
+                        span.las.la-igloo 
+                        span Appointments
+
+                li 
+                    a(href="/patients" class="")
+                        span.las.la-igloo 
+                        span Patients 
+                li 
+                    a(href="/reports" class="")
+                        span.las.la-igloo 
+                        span Reports 
+                li 
+                    a(href="/pescriptions" class="")
+                        span.las.la-igloo 
+                        span Pescriptions
+                li 
+                    a(href="/revenues" class="")
+                        span.las.la-igloo 
+                        span Revenues 
+                li 
+                    a(href="/settings" class="")
+                        span.las.la-igloo 
+                        span Settings 
+                li 
+                    a(href="/analytics" class="")
+                        span.las.la-igloo 
+                        span Analytics
+                
+block contents
+    .main 
+        .main__bar
+            .title__bar 
+                h1 Dashboard
+        .main__content 
+            .grid 
+                .grid__cards 
+                    .grid__card 
+                        .card__details 
+                            .card__detail
+                                h2 5400
+                                span Customers 
+                            span.las.la-bars
+                        .card__image 
+                            img(src="/img/bar2.svg", alt="")
+                    .grid__card 
+                        .card__details
+                            .card__detail
+                                h2 1000
+                                span Revenue 
+                            span.las.la-hand-holding-usd 
+                        .card__image 
+                            img(src="/img/line.svg", alt="")
+                    .grid__card 
+                        .card__details
+                            .card__detail 
+                                h2 540
+                                span Orders
+                            span.las.la-clipboard 
+                        .card__image 
+                            img(src="/img/bar3.svg", alt="")
+                    .grid__card 
+                        .card__details
+                            .card__detail 
+                                h2 54 
+                                span Delivery Boy
+                            span.las.la-users 
+                        .card__image 
+                            img(src="/img/bar2.svg", alt="")
+                .grid__box
+                    .image__container 
+                        img(src="/img/box.svg", alt="")                   
+
+
+

@@ -1,0 +1,141 @@
+extends base
+block sidebar 
+    .sidebar
+        .sidebar__brand 
+            h2 
+                span.las.la-accusoft 
+                span DD Centre
+        .sidebar__container 
+            .user 
+                span.user__image 
+                span.user__details 
+                    h2 Dr Deka
+                    small Doctor
+            ul 
+                li 
+                    a(href="#" class="active")
+                        span.las.la-igloo 
+                        span Appointments
+
+                li 
+                    a(href="/patients" class="")
+                        span.las.la-igloo 
+                        span Patients 
+                li 
+                    a(href="/reports" class="")
+                        span.las.la-igloo 
+                        span Reports 
+                li 
+                    a(href="/pescriptions" class="")
+                        span.las.la-igloo 
+                        span Pescriptions
+
+
+
+block contents
+    .main 
+        .main__bar
+            .title__bar 
+                h1 My Appointments
+            .activity__bar
+                .search 
+                    span search here 
+                ul 
+                    li 
+                        a(href='#' class='active') All 
+                    li 
+                        a(href='#') Pending
+                    li 
+                        a(href='#') Checked
+
+        .main__content 
+            .content-table
+                .table-title 
+                    h2 Appointment List 
+                    span 
+                        button Today 
+                        button Pending 
+                        button Checked 
+
+                table 
+                    thead 
+                        tr 
+                            th No.
+                            th Patient Name 
+                            th Doctor Name
+                            th Schedule 
+                            th Status 
+                            th Activity       
+                    tbody 
+                        tr 
+                            td 1
+                            td Dimbeswar
+                            td Dr. Ratneswar 
+                            td 12:00PM-3:00PM
+                            td Pending
+                            td   
+                                a(href="#")     
+                                    button(onClick="document.getElementById('modal-patient').style.display='block'").btn.btn--secondar View
+                                a(href="#")     
+                                    button(onClick="document.getElementById('modal').style.display='block'").btn.btn--secondary Tests
+                                a(href="#")     
+                                    button(onClick="document.getElementById('modal-pescribe').style.display='block'").btn.btn--primary Pescription
+
+
+block modal-patient
+    .form-heading 
+        h2 Patient Details
+        span(onClick="document.getElementById('modal-patient').style.display='none'").las.la-times#btn--close 
+    form.form-category
+        .form__fields 
+            label Patient Name
+            label Ratneswar Deka
+        .form__fields 
+            label Age
+            label 27
+        .form__fields 
+            label Appointment Date 
+            label 2022-09-02
+        .form__fields 
+            label Appointment Day 
+            label Sunday
+        .form__fields 
+            label Timing 
+            label 12:00 PM - 3.00 PM
+        .form__fields 
+            label Reason for appointment 
+            label Feaver Cough
+
+        .btn__fields 
+            input(type="submit" value="Edit").btn.btn--primary
+            input(type="submit" value="Close").btn.btn--secondary
+
+            
+block modal-pescribe
+    .form-heading 
+        h2 Pescription
+        span(onClick="document.getElementById('modal-pescribe').style.display='none'").las.la-times#btn--close 
+    .pescribe-wrapper
+        .pescribe-header
+            .header-logo
+                img(src="/img/logo-doctor.svg", alt="")
+            .header-details
+                h2 Dr. Ratneswar
+                span Chamber 
+                span Address: XXX,XXXX,XXX 
+                span Number: XXXXXXX90
+        .pescribe-section 
+            .pescribe-sidebar 
+                .pescribe-description
+                    h2 Symtoms 
+                    input(type="text").description
+                .pescribe-description 
+                    h2 Tests
+                    input(type="text").description
+                .pescribe-description
+                    h2 Advice 
+                    input(type="text").description
+            .pescribe-main
+                span 
+                    h1 Rx
+                .pescribe-main-content

@@ -1,0 +1,39 @@
+doctype
+html(lang='en')
+    head
+        meta(charset='utf-8')
+
+        title DD Centre
+        meta(name="description" content="")
+
+        link(rel="stylesheet" href="/css/styles1.css")
+        link(rel="stylesheet"
+        href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css")
+        
+    body 
+        .container 
+            if user
+                
+                block sidebar
+                .section
+                    include _header-admin
+                    block contents
+                include _modalAppoint
+                    block modal-appoint
+                include _modalPatientView
+                    block modal-patient
+                include _modalPescribe
+                    block modal-pescribe 
+                include _modalReport
+                    block modal-report
+            else
+                include _header-login
+                .main-content__admin
+                         block admin
+        
+        script(async src="https://unpkg.com/axios/dist/axios.min.js") 
+        script(src="/js/login.js"  async defer)      
+     
+
+
+

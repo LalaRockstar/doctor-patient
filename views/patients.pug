@@ -1,0 +1,6 @@
+if user.role==="admin"
+    include _patientsAdmin
+if user.role==="recep"
+    include _patientsRecap
+else if user.role==='doctor'
+    include _patientsDoctor

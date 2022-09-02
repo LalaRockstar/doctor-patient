@@ -1,0 +1,140 @@
+extends base
+block sidebar 
+    .sidebar
+        .sidebar__brand 
+            h2 
+                span.las.la-accusoft 
+                span DD Centre
+        .sidebar__container 
+            .user 
+                span.user__image 
+                span.user__details 
+                    h2=user.name
+                    small Doctor
+            ul 
+                li 
+                    a(href="#" class="active")
+                        span.las.la-igloo 
+                        span Appointments
+
+                li 
+                    a(href="/patients" class="")
+                        span.las.la-igloo 
+                        span Patients 
+                li 
+                    a(href="/reports" class="")
+                        span.las.la-igloo 
+                        span Reports 
+                li 
+                    a(href="/piescriptons" class="")
+                        span.las.la-igloo 
+                        span Pescriptions
+                li 
+                    a(href="/bills" class="")
+                        span.las.la-igloo 
+                        span Bills
+                
+                
+block contents
+    .main 
+        .main__bar
+            .title__bar 
+                h1 Appointments 
+            .activity__bar 
+                .search 
+                    span search here
+                ul 
+                    li 
+                        a(href='/dashboard') Book slot
+                    li 
+                        a(href='#' class="active") Appointments
+                    
+                
+
+        .main__content 
+            .content-table
+                .table-title 
+                    h2 Appointment List 
+                    span 
+                        button Today 
+                        button Pending 
+                        button Checked 
+                        
+                table 
+                    thead 
+                        tr 
+                            th No.
+                            th Patient Name 
+                            th Doctor Name
+                            th Schedule 
+                            th Status 
+                            th Activity       
+                    tbody 
+                        tr 
+                            td 1
+                            td Dimbeswar
+                            td Dr. Ratneswar 
+                            td 12:00PM-3:00PM
+                            td Pending
+                            td   
+                                a(href="#")     
+                                    button(onClick="document.getElementById('modal').style.display='block'").btn.btn--secondary Edit
+                                a(href="#")     
+                                    button(onClick="document.getElementById('modal').style.display='block'").btn.btn--secondary Delete
+                                    
+                                    
+                    
+                            
+block modal
+    .form-heading 
+        h2 New Appointment
+        span(onClick="document.getElementById('modal').style.display='none'").las.la-times#btn--close 
+    .form-title 
+        h2 Patient Details
+    form.form-category
+    
+        .form__fields 
+            label Phone Number
+            input(type="number").form__control#name
+        .form__fields 
+            label Name 
+            input(type="text").form__control#name 
+        .form__fields 
+            label Age 
+            input(type="number").form__control#name 
+        .form__fields 
+            label DOB 
+            input(type="date").form__control#name 
+        .form__fields 
+            label Address
+            input(type="address").form__control#name 
+        .form__fields 
+            label Pin 
+            input(type="number").form__control#name 
+        
+        
+    .form-title 
+        h2 Appointment Details
+    form.form-category
+    
+        .form__fields 
+            label Doctor Name
+            label Dr Ratneswar
+        .form__fields 
+            label Appointment Date 
+            label 2022-09-02
+        .form__fields 
+            label Appointment Day 
+            label Sunday
+        .form__fields 
+            label Timing 
+            label 12:00 PM - 3.00 PM
+        .form__fields 
+            label Reason for appointment 
+            input(type="text").form__control#name
+        
+        .btn__fields 
+            input(type="submit" value="Close").btn.btn--primary
+            input(type="submit" value="Book").btn.btn--secondary
+            
+
